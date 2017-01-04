@@ -1,13 +1,13 @@
 import {Component, OnInit, Output, EventEmitter, Injector} from '@angular/core';
 
 @Component({
-  selector: 'app-hello-world',
+  selector: 'hello-world',
   template: `
 <div class="background" (click)="closeModal()">  
 </div>
 <div class="modal">
-    <div class="modal-header">titlu</div>
-    <div class="modal-body">mesaj {{showNum}}</div>
+    <div class="modal-header">Hello</div>
+    <div class="modal-body">World {{showNum}}</div>
 </div>
 `,
   styleUrls: ['./hello-world.component.css']

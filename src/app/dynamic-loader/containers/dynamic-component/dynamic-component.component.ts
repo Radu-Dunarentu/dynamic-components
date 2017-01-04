@@ -4,10 +4,11 @@ import {
 } from '@angular/core';
 import {WorldHelloComponent} from "../../components/world-hello/world-hello.component";
 import {HelloWorldComponent} from "../../components/hello-world/hello-world.component";
+import {CustomComponent} from "../../components/custom/custom.component";
 
 @Component({
   selector: 'dynamic-component',
-  entryComponents: [HelloWorldComponent, WorldHelloComponent],
+  entryComponents: [HelloWorldComponent, WorldHelloComponent, CustomComponent],
   template: `
     <div #dynamicComponentContainer ></div>
 `,

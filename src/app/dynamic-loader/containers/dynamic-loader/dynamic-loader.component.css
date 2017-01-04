@@ -1,0 +1,11 @@
+.customComponent {
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.cici {
+  padding-top: 8px;
+  padding-bottom: 16px;
+}

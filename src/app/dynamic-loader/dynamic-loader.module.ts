@@ -7,6 +7,7 @@ import { DynamicLoaderComponent } from './containers/dynamic-loader/dynamic-load
 import { DynamicComponentComponent } from './containers/dynamic-component/dynamic-component.component';
 import { HelloWorldComponent } from './components/hello-world/hello-world.component';
 import { WorldHelloComponent } from './components/world-hello/world-hello.component';
+import { CustomComponent } from './components/custom/custom.component';
 
 // containers
 
@@ -19,7 +20,8 @@ import { WorldHelloComponent } from './components/world-hello/world-hello.compon
   DynamicLoaderComponent,
   DynamicComponentComponent,
   HelloWorldComponent,
-  WorldHelloComponent],
+  WorldHelloComponent,
+  CustomComponent],
   imports: [
     CommonModule
   ],
