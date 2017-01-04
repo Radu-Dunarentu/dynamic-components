@@ -4,6 +4,9 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { DynamicLoaderComponent } from './containers/dynamic-loader/dynamic-loader.component';
+import { DynamicComponentComponent } from './containers/dynamic-component/dynamic-component.component';
+import { HelloWorldComponent } from './components/hello-world/hello-world.component';
+import { WorldHelloComponent } from './components/world-hello/world-hello.component';
 
 // containers
 
@@ -13,7 +16,10 @@ import { DynamicLoaderComponent } from './containers/dynamic-loader/dynamic-load
 
 @NgModule({
   declarations: [
-  DynamicLoaderComponent],
+  DynamicLoaderComponent,
+  DynamicComponentComponent,
+  HelloWorldComponent,
+  WorldHelloComponent],
   imports: [
     CommonModule
   ],
