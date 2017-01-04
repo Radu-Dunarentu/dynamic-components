@@ -5,7 +5,7 @@ import {HelloWorldComponent} from "../../components/hello-world/hello-world.comp
 @Component({
   selector: 'dynamic-loader',
   template: `
-    <div>
+    <div >
       <h2>Lets dynamically create some components!</h2>
       <button (click)="createHelloWorldComponent()">Create Hello World</button>
       <button (click)="createWorldHelloComponent()">Create World Hello</button>
@@ -22,6 +22,7 @@ export class DynamicLoaderComponent implements OnInit {
   }
 
   componentData = null;
+
 
   createHelloWorldComponent(){
     this.componentData = {

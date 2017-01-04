@@ -1,6 +1,6 @@
 import {
   Component, OnInit, ViewChild, ViewContainerRef, ComponentFactoryResolver,
-  ReflectiveInjector, Input
+  ReflectiveInjector, Input, Output, EventEmitter
 } from '@angular/core';
 import {WorldHelloComponent} from "../../components/world-hello/world-hello.component";
 import {HelloWorldComponent} from "../../components/hello-world/hello-world.component";
@@ -9,7 +9,7 @@ import {HelloWorldComponent} from "../../components/hello-world/hello-world.comp
   selector: 'dynamic-component',
   entryComponents: [HelloWorldComponent, WorldHelloComponent],
   template: `
-    <div #dynamicComponentContainer (destroy)="clickOut($event)"></div>
+    <div #dynamicComponentContainer ></div>
 `,
   styleUrls: ['./dynamic-component.component.css']
 })
@@ -19,10 +19,7 @@ export class DynamicComponentComponent {
 
   constructor(private resolver: ComponentFactoryResolver) {  }
 
-  clickOut($event) {
-    console.log('destroy', $event);
-    this.currentComponent.destroy();
-  }
+
   // component: Class for the component you want to create
   // inputs: An object with key/value pairs mapped to input name/input value
   @Input() set componentData(data: {component: any, inputs: any }) {
