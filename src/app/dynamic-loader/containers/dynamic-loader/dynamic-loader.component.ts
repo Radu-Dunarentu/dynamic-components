@@ -16,7 +16,7 @@ import {CustomComponent} from "../../components/custom/custom.component";
         <div class="cici"><input  type="text" name="customTitle" #customTitle></div>
         <label for="customBody">Insert Body</label>
         <div class="cici"><input type="text" name="customBody" #customBody></div>
-        <button (click)="createCustomComponent(customTitle.value, customBody.value)">Create</button>
+        <button (click)="createCustomComponent(customTitle, customBody)">Create</button>
       </div>
     </div>
     <dynamic-component [componentData]="componentData"></dynamic-component>
@@ -36,10 +36,12 @@ export class DynamicLoaderComponent implements OnInit {
     this.componentData = {
       component: CustomComponent,
       inputs: {
-        title: title,
-        body: body
+        title: title.value,
+        body: body.value
       }
-    }
+    };
+    title.value = null;
+    body.value = null;
   }
 
   createHelloWorldComponent(){

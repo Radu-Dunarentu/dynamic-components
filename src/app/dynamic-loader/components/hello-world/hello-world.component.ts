@@ -7,8 +7,8 @@ import {NotificationService} from "../../../notification.service";
 <div class="background" (click)="closeModal()">  
 </div>
 <div class="modal">
-    <div class="modal-header">Hello</div>
-    <div class="modal-body">World {{showNum}}</div>
+    <div class="modal-header">World</div>
+    <div class="modal-body">Hello {{showNum}}</div>
 </div>
 `,
   styleUrls: ['./hello-world.component.css']
