@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import {DynamicLoaderModule} from "./dynamic-loader/dynamic-loader.module";
+import {NotificationService} from "./notification.service";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import {DynamicLoaderModule} from "./dynamic-loader/dynamic-loader.module";
     HttpModule,
     DynamicLoaderModule
   ],
-  providers: [],
+  providers: [NotificationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

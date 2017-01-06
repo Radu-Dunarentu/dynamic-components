@@ -5,6 +5,7 @@ import {
 import {WorldHelloComponent} from "../../components/world-hello/world-hello.component";
 import {HelloWorldComponent} from "../../components/hello-world/hello-world.component";
 import {CustomComponent} from "../../components/custom/custom.component";
+import {NotificationService} from "../../../notification.service";
 
 @Component({
   selector: 'dynamic-component',
@@ -14,13 +15,15 @@ import {CustomComponent} from "../../components/custom/custom.component";
 `,
   styleUrls: ['./dynamic-component.component.css']
 })
-export class DynamicComponentComponent {
+export class DynamicComponentComponent implements OnInit{
   currentComponent = null;
   @ViewChild('dynamicComponentContainer', { read: ViewContainerRef }) dynamicComponentContainer: ViewContainerRef;
 
-  constructor(private resolver: ComponentFactoryResolver) {  }
+  constructor(private resolver: ComponentFactoryResolver, private notification: NotificationService) {  }
 
-
+  ngOnInit() {
+    this.notification.closePopup.subscribe(_ => this.currentComponent.destroy());
+  }
   // component: Class for the component you want to create
   // inputs: An object with key/value pairs mapped to input name/input value
   @Input() set componentData(data: {component: any, inputs: any }) {
